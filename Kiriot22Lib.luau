@@ -120,9 +120,6 @@ function boxBase:Update()
         allow = false
     end
 
-    if self.Player and not ESP.Players then
-        allow = false
-    end
     if self.IsEnabled and (type(self.IsEnabled) == "string" and not ESP[self.IsEnabled] or type(self.IsEnabled) == "function" and not self:IsEnabled()) then
         allow = false
     end
